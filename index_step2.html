@@ -21,12 +21,9 @@
     });
   </script>
 
-  <!-- debugUIEnabledをtrueにすると、デバッグ情報が表示される。 -->
   <a-scene embedded arjs='debugUIEnabled: false;'>
-
-    <!-- マーカーを設定。デフォルトではpresetにhiroとkanjiが設定可能。 -->
     <a-marker preset='hiro' marker>
-      <!-- 立方体を描写 -->
+      <!-- 三角錐を描写 -->
       <!-- 最初の3秒で大きさの倍率を0から1に -->
       <!-- その後3秒かけてxyz軸方向それぞれ360度回転をループ -->
       <a-tetrahedron id='obj' material='color: red;' position='0 1.5 0' scale='0 0 0'
