@@ -23,24 +23,20 @@
 
   <a-scene embedded arjs='debugUIEnabled: false;'>
     <a-marker preset='hiro' marker>
-      <!-- 三角錐を描写 -->
+      <!-- 三角錐を描画 -->
       <!-- 最初の3秒で大きさの倍率を0から1に -->
-      <!-- その後3秒かけてxyz軸方向それぞれ360度回転をループ -->
+      <!-- その後3秒かけてxyz軸をそれぞれ360度回転をループ -->
       <a-tetrahedron id='obj' material='color: red;' position='0 1.5 0' scale='0 0 0'
         animation__scale='property: scale; dur: 3000; from: 0 0 0; to: 1 1 1; easing: linear; enabled: false;'
-        animation__rotation='property: rotation; dur: 3000; from: 0 0 0; to: 360 360 360; easing: easeInOutCubic; loop: true; startEvents: animationcomplete__scale;'
+        animation__rotation='property: rotation; dur: 3000; from: 0 0 0; to: 90 180 360; easing: easeInOutCubic; loop: true; startEvents: animationcomplete__scale;'
       >
-      </a-box>
+      </a-tetrahedron>
     </a-marker>
-
     <!-- カメラを設定 -->
     <a-entity camera></a-entity>
-
   </a-scene>
 
-
 </body>
-
 
 </html>
 
